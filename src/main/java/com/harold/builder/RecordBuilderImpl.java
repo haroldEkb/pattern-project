@@ -42,7 +42,8 @@ public class RecordBuilderImpl implements RecordBuilder {
         return this;
     }
 
-    public Record getResultRecord() {
+    @Override
+    public Record getResult() {
         return resultRecord;
     }
 
