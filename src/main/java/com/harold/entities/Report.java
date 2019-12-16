@@ -8,6 +8,12 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 public class Report {
-    private String UserId;
+    private Integer id;
+    private User User;
     private String content;
+
+    public Report(com.harold.entities.User user, String content) {
+        User = user;
+        this.content = content;
+    }
 }

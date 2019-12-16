@@ -33,7 +33,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/harold/configs" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -41,13 +41,16 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.harold.utils" />
       <recent name="com.harold.repository" />
       <recent name="com.harold.builder" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.harold.service" />
       <recent name="com.harold.repository" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\harol\Documents\pattern-project\src\main\java\com\harold\configs" />
       <recent name="C:\Users\harol\Documents\pattern-project\src\main\resources" />
       <recent name="C:\Users\harol\Documents\pattern-project" />
       <recent name="C:\Users\harol\Documents\pattern-project\.idea\libraries" />
@@ -153,10 +156,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="223" y="70" width="1089" height="692" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1576150259128" />
-    <state x="574" y="131" key="#com.intellij.ide.util.MemberChooser" timestamp="1576156729822">
+    <state x="574" y="131" key="#com.intellij.ide.util.MemberChooser" timestamp="1576499682791">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="574" y="131" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1576156729822" />
+    <state x="574" y="131" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1576499682791" />
     <state x="549" y="169" key="FileChooserDialogImpl" timestamp="1576151905650">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -185,10 +188,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1576151218405" />
-    <state width="508" height="92" key="javadoc.popup.new" timestamp="1576155438203">
+    <state width="508" height="92" key="javadoc.popup.new" timestamp="1576500636829">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="508" height="92" key="javadoc.popup.new/0.0.1536.824@0.0.1536.824" timestamp="1576155438203" />
+    <state width="508" height="92" key="javadoc.popup.new/0.0.1536.824@0.0.1536.824" timestamp="1576500636829" />
     <state x="209" y="38" key="new project wizard" timestamp="1576147519486">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

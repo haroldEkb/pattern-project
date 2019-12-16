@@ -17,6 +17,7 @@ public class User {
     private String name;
     private String password;
     private String email;
+    private String phone;
     private List<Record> records;
 
     public User(int id, String name) {
