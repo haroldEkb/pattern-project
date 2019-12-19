@@ -11,12 +11,17 @@ import java.util.List;
 @NoArgsConstructor
 //@Entity
 public class User {
+    public enum Subscribe {
+        BASIC, ADVANCED, PRO;
+    }
+
 //    @Id
     private Integer id;
 
     private String name;
     private String password;
     private String email;
+    private Subscribe subscribe;
     private List<Record> records;
 
     public User(int id, String name) {
