@@ -10,6 +10,13 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 public class Report {
+    private Integer id;
     private Integer UserId;
+    private User User;
     private List<String> content;
+
+    public Report(com.harold.entities.User user, List<String> content) {
+        User = user;
+        this.content = content;
+    }
 }

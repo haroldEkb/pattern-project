@@ -23,6 +23,7 @@ public class User {
     private String email;
     private Subscribe subscribe;
     private List<Record> records;
+    private String phone;
 
     public User(int id, String name) {
         this.id = id;
