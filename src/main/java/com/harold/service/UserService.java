@@ -2,6 +2,8 @@ package com.harold.service;
 
 import com.harold.builder.Director;
 import com.harold.entities.Report;
+import com.harold.repository.DBManager;
+import com.harold.repository.UserRepositoryImpl;
 import com.harold.strategy.AdvancedReportStrategy;
 import com.harold.strategy.BasicReportStrategy;
 import com.harold.strategy.ProReportStrategy;
@@ -13,6 +15,9 @@ import com.harold.utils.Notificator;
 import com.harold.utils.SMSDecorator;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 public class UserService {
     @Autowired
     private RecordService recordService;
@@ -23,8 +28,13 @@ public class UserService {
     @Autowired
     private Director director;
 
-    @Autowired
     private UserRepository userRepository;
+
+    @PostConstruct
+    private void init(){
+        DBManager.createUserTable();
+        userRepository = new UserRepositoryImpl(DBManager.getSessionFactory());
+    }
 
     public void addSomeRecord(){
         director.addRecord("default");
@@ -44,5 +54,11 @@ public class UserService {
         if (user.getPhone() != null) notificator = new SMSDecorator(notificator);
         if (user.getEmail() != null) notificator = new MailDecorator(notificator);
         notificator.send(reportService.getReportByUser(user));
+    }
+
+    @PreDestroy
+    private void destroy(){
+        userRepository.close();
+        DBManager.dropUserTable();
     }
 }
