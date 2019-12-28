@@ -1,9 +1,14 @@
 package com.harold.builder;
 
+import com.harold.entities.Record;
 import com.harold.entities.User;
+import com.harold.utils.SimpleRecord;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.time.LocalDate;
 
+@NoArgsConstructor
 public class Director {
     private RecordBuilder recordBuilder;
 
@@ -15,7 +20,7 @@ public class Director {
     private Double sum = 20.50;
 
     public void addRecord(String mode) {
-        if (mode.equals("default")){
+        if (mode.equals("mock")){
             recordBuilder.reset()
                     .setUserId(user.getId())
                     .setCategory(category)
@@ -25,7 +30,32 @@ public class Director {
         }
     }
 
+    public void addRecord(SimpleRecord record, String mode) {
+        if (record != null){
+            if (mode.equals("default")){
+                recordBuilder.reset()
+                        .setUserId(record.getUserId())
+                        .setCategory(record.getCategory())
+                        .setLocation(record.getLocation())
+                        .setData(record.getData())
+                        .setSum(record.getSum());
+            }
+        }
+    }
+
     public Director(RecordBuilder recordBuilder) {
         this.recordBuilder = recordBuilder;
+    }
+
+    public void setRecordBuilder(RecordBuilder recordBuilder) {
+        this.recordBuilder = recordBuilder;
+    }
+
+    public boolean isBuilderAssigned(){
+        return recordBuilder != null;
+    }
+
+    public Record getResult(){
+        return recordBuilder.getResult();
     }
 }

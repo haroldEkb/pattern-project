@@ -1,6 +1,7 @@
 package com.harold.builder;
 
 import com.harold.entities.Record;
+import lombok.Setter;
 
 import java.time.LocalDate;
 
