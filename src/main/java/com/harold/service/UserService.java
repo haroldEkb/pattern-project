@@ -19,14 +19,9 @@ import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
 public class UserService {
-    @Autowired
-    private RecordService recordService;
 
     @Autowired
     private ReportService reportService;
-
-    @Autowired
-    private Director director;
 
     private UserRepository userRepository;
 
@@ -35,12 +30,6 @@ public class UserService {
         DBManager.createUserTable();
         userRepository = new UserRepositoryImpl(DBManager.getSessionFactory());
     }
-
-    public void addSomeRecord(){
-        director.addRecord("default");
-        recordService.saveRecord();
-    }
-
 
     public Report getReport(User user){
         if (user.getSubscribe() == User.Subscribe.BASIC) return reportService.getReport(user, new BasicReportStrategy());
